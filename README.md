@@ -42,6 +42,7 @@ Solid lines are built; dotted lines are on the roadmap.
 | **Data quality checks** | Duplicate keys, missing hours, negative pollutant values, excessive nulls; `--strict` blocks bad data |
 | **Backfills** | `--start` / `--end` load any date range |
 | **Tests + CI** | 13 pytest tests (no network needed) and Ruff linting on every push via GitHub Actions |
+| **Daily live run** | A scheduled GitHub Actions workflow runs the pipeline against the live API every morning (07:00 IST), publishes a per-city summary and uploads the data as an artifact |
 
 ### Bronze schema
 
@@ -86,7 +87,7 @@ pytest -q                                             # run tests
 
 ## Roadmap
 
-- [x] **Week 1:** ingestion, raw + bronze layers, quality checks, tests, CI
+- [x] **Week 1:** ingestion, raw + bronze layers, quality checks, tests, CI, daily scheduled run
 - [ ] **Week 2:** Airflow DAG (Docker Compose), daily schedule, cloud object storage
 - [ ] **Week 3:** dbt silver/gold models (daily city AQI, pollutant trends) with dbt tests, in a cloud warehouse
 - [ ] **Week 4:** dashboard + next-day AQI forecasting model, final write-up
