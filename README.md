@@ -6,7 +6,7 @@
 
 An end-to-end **data engineering project** that collects hourly air-quality data for major Indian cities, stores it in a layered data lake, and (in upcoming weeks) orchestrates, models, tests and serves it for analytics and ML forecasting.
 
-> **Status: Week 1 of 4 — ingestion layer complete.** Built in public; progress is logged below.
+> **Status: Phase 1 complete — ingestion, raw/bronze layers, quality checks, CI and a scheduled daily ingest.** Orchestration, dbt models and forecasting are planned next phases.
 
 ---
 
